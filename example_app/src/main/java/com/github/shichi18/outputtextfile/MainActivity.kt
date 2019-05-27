@@ -14,33 +14,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val licenseText = findViewById<TextView>(R.id.output_text)
-//        val textName = "InputData/input.txt"
         val fileOutput = FileOutput()
-
         val assetManager = resources.assets
-        var list = fileOutput.displayAssets("InputData", assetManager)
+        val list = fileOutput.displayAssets("InputData", assetManager)
 
         val linearLayout = findViewById<LinearLayout>(R.id.linearlayout)
         for (i in list!!.indices) {
             val inputStream: InputStream = assetManager.open("InputData/" + list[i])
             val inputString = fileOutput.fileInput(inputStream)
-//            licenseText.text = inputString
             val textView = TextView(this)
             textView.text = inputString
-//            textView.textSize = 50f
-//            textView.setTextColor(Color.RED)
             linearLayout.addView(textView)
         }
-
-//        val assetManager = assets
-//        val files = assetManager.list("your_folder_name_inside_assets")
-//        val it = LinkedList<String>(Arrays.asList(files))
-//
-//        val assetMgr = resources.assets
-//        /** assets内のファイルをログ表示.*/
-//        fileoutput.displayAssets("InputData",assetMgr)
-
     }
-
 }
