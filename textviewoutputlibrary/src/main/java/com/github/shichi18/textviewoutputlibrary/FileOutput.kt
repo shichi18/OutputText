@@ -4,7 +4,7 @@ import java.io.InputStream
 
 class FileOutput {
 
-    private fun fileInput(inputStream: InputStream) {
+    fun fileInput(inputStream: InputStream): String {
 //        val licenseText = view.findViewById<TextView>(R.id.output_text)
 
 //        val inputStream: InputStream = resources.assets.open(textName)
