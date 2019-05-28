@@ -7,7 +7,7 @@ import android.widget.TextView
 import java.io.IOException
 import java.io.InputStream
 
-class PushTextView {
+class OutputTextView {
 
     private fun fileInput(assetManager: AssetManager, files: String, dir: String): String {
         val inputStream: InputStream = assetManager.open("$dir/$files")
@@ -37,6 +37,7 @@ class PushTextView {
             }
 
         } catch (e: IOException) {
+            println("Error")
         }
 
     }
