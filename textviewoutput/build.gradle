@@ -5,13 +5,11 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
 
-
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
-
+        versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
@@ -22,8 +20,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
 }
+
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -34,4 +33,19 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+
+def repo = new File(rootDir, "repository")
+
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository url: "file://${repo.absolutePath}"
+            pom.version = '1.0.0'
+            pom.groupId = 'com.github.shichi18.textviewoutput'
+            pom.artifactId = 'textviewoutput'
+        }
+    }
 }
