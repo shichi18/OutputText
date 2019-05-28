@@ -14,6 +14,6 @@ class MainActivity : AppCompatActivity() {
         val outputTextView = OutputTextView()
         val assetManager = resources.assets
         val linearLayout = findViewById<LinearLayout>(R.id.linearlayout)
-        outputTextView.textViewAssets(this,"InputData",assetManager,linearLayout)
+        outputTextView.textViewAssets(this, "InputData", assetManager, linearLayout)
     }
 }
