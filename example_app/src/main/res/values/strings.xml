@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">OutputTextFile</string>
+    <string name="app_name">OutputText</string>
     <string name="licence_label">Licence</string>
     <string name="text_output_label">Text Output!!!</string>
 </resources>

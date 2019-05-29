@@ -22,7 +22,7 @@ android {
 }
 
 dependencies {
-    implementation project(':textviewoutput')//remove
+    implementation project(':output_text')//remove
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -35,9 +35,9 @@ dependencies {
 
 /**"add library*/
 //dependencies {
-//    implementation 'com.github.shichi18.textviewoutput:textviewoutput:1.0.0'
+//    implementation 'com.github.shichi18.outputtext:outputtext:1.0.0'
 //}
 //repositories {
-//    maven { url 'http://raw.github.com/shichi18/OutputTextFile/master/repository/' }
+//    maven { url 'http://raw.github.com/shichi18/OutputText/master/repository/' }
 //}
 

@@ -1,1 +1,1 @@
-include ':example_app', ':textviewoutput'
+include ':example_app', ':output_text'
