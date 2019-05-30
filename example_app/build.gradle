@@ -33,7 +33,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 
-/**"add library*/
+///**"add library*/
 //dependencies {
 //    implementation 'com.github.shichi18.outputtext:outputtext:1.0.0'
 //}
